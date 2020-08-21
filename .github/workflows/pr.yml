@@ -1,0 +1,25 @@
+name: Pull Request
+
+on:
+  pull_request:
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: yarn install --silent --frozen-lockfile
+      - run: yarn lint
+      - run: yarn type-check
+      - run: yarn build
+      - run: yarn test
+      - run: yarn size
