@@ -26,6 +26,6 @@
 		"develop": "yarn build --watch"
 	},
 	"dependencies": {
-		"@atmc/core": "1.0.6
+		"@atmc/core": "1.0.6"
 	}
 }
