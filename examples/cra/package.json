@@ -1,0 +1,33 @@
+{
+	"name": "example-cra",
+	"version": "1.0.1",
+	"private": true,
+	"scripts": {
+		"build": "react-scripts build",
+		"eject": "react-scripts eject",
+		"start": "react-scripts start",
+		"type-check": "tsc"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"@atmc/css": "1.0.1",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "3.4.1"
+	},
+	"devDependencies": {
+		"@types/react": "^16.9.43",
+		"@types/react-dom": "^16.9.8"
+	}
+}
