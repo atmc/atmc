@@ -325,5 +325,45 @@ describe("Integration Tests - Get Rules", () => {
 		);
 	});
 
+	test("should return classes for non-standard pseudo-element", () => {
+		expect(
+			css({
+				selectors: {
+					"::-ms-expand": { backgroundColor: "transparent" },
+				},
+			}),
+		).toBe("iis6lg");
+		expect(rules).toEqual(
+			new Set([
+				"._102kj1d > * + *{margin-left:16px}",
+				"._117wnve{color:blue}",
+				"._45bbqm{margin:10px 0}",
+				"._8tllku:hover{color:green}",
+				"._9ujgx8{--theme-color:black}",
+				".dfjll8{background-color:#fff}",
+				".dzcwyi:active{outline:solid}",
+				".gcdok5 + &{color:green}",
+				".yvlnnb strong{color:#333}",
+				".zjik7{display:flex}",
+				"._1n3rzf3{background-color:red}",
+				"._1laqh5k{color:darkblue}",
+				"._1fbaxbr svg path{fill:darkgreen}",
+				".geqzxf{user-select:none;-ms-user-select:none;-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none;-ms-user-select:none}",
+				".iis6lg::-ms-expand{background-color:transparent}",
+				"@keyframes _13owpa8{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}",
+				".y4ga4x{height:40vmin}",
+				".je8g23{pointer-events:none}",
+				".jy6a2s{color:var(--theme-color)}",
+				".kg9kzo{justify-content:space-around;justify-content:space-evenly}",
+				".skdl2v:focus{outline:solid}",
+				"._9qipgn{animation:_13owpa8 infinite 20s linear}",
+				"@media(prefers-reduced-motion:reduce){._1deo81b{animation:none}}",
+				"@keyframes _1ufu960{0%{fontSize:10px}30%{fontSize:15px}_100%{fontSize:12px}}",
+				"._1ea3b7j{animation:_1ufu960 2s infinite}",
+				"@media(prefers-reduced-motion:reduce){._1ys1pbl{font-size:14px}}",
+			]),
+		);
+	});
+
 	// export const hydrate = defaultInstance.hydrate;
 });
