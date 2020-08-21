@@ -35,7 +35,11 @@ export const setup = ({ rules, sheet }: Setup = {}): Instance => {
 		ruleIndex.add(name);
 		ruleSet.add(rule);
 		if (sheet) {
-			sheet.insertRule(rule, ruleIndex.size - 1);
+			try {
+				sheet.insertRule(rule);
+			} catch (e) {
+				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
+			}
 		}
 	};
 	const decomposeToClassNames = decompose(has, add);
