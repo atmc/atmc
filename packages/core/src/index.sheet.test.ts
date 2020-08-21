@@ -360,8 +360,8 @@ describe("Integration Tests - CSSStyleSheet", () => {
 			".dzcwyi:active{outline:solid}",
 			".gcdok5 + &{color:green}",
 			"._9ujgx8{--theme-color:black}",
-			".iis6lg::-ms-expand{background-color:transparent}",
 			".jy6a2s{color:var(--theme-color)}",
+			".iis6lg::-ms-expand{background-color:transparent}",
 		]);
 	});
 

@@ -36,7 +36,7 @@ export const setup = ({ rules, sheet }: Setup = {}): Instance => {
 		ruleSet.add(rule);
 		if (sheet) {
 			try {
-				sheet.insertRule(rule);
+				sheet.insertRule(rule, ruleIndex.size - 1);
 			} catch (e) {
 				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
 			}
