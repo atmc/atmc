@@ -1,0 +1,44 @@
+{
+	"root": true,
+	"env": { "browser": true },
+	"parserOptions": { "project": "./tsconfig-base.json" },
+	"extends": [
+		"tslint-plugin-prettier",
+		"tslint:recommended",
+		"tslint-config-prettier",
+		"@netflix/tslint-config"
+	],
+	"plugins": ["prettier", "simple-import-sort"],
+
+	"rules": {
+		"prettier": true,
+		// Auto-sort imports
+		"sort-imports": "off",
+		"import/order": "off",
+		"simple-import-sort/sort": "error",
+
+		// Using a type system makes it safe enough to disable the check below
+		"react/jsx-props-no-spreading": "off",
+
+		// Custom preferences
+		"import/prefer-default-export": "off",
+		"no-bitwise": "off",
+		"no-plusplus": "off"
+	},
+
+	"overrides": [
+		{
+			"files": ["*.js", "*.jsx"],
+			"rules": {
+				"@typescript-eslint/explicit-function-return-type": "off",
+				"@typescript-eslint/explicit-module-boundary-types": "off"
+			}
+		},
+		{
+			"files": ["rollup.config.js"],
+			"rules": {
+				"import/no-extraneous-dependencies": "off"
+			}
+		}
+	]
+}
