@@ -1,6 +1,6 @@
 {
 	"name": "@atmc/css",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Atomic CSS-in-JS with a featherweight runtime",
 	"keywords": [
 		"css-in-js",
@@ -26,6 +26,6 @@
 		"develop": "yarn build --watch"
 	},
 	"dependencies": {
-		"@atmc/core": "1.0.4"
+		"@atmc/core": "1.0.5"
 	}
 }
