@@ -2,7 +2,7 @@ export const styleID = "_atmc";
 
 export const getStyleId = (): HTMLStyleElement => {
 	// Hydrate existing style element if available
-	let el = document.getElementById(styleID) as HTMLStyleElement | null;
+	let el = document.getElementById(styleID) as HTMLStyleElement;
 	if (el) {
 		return el;
 	}
@@ -13,6 +13,6 @@ export const getStyleId = (): HTMLStyleElement => {
 
 	// Avoid Edge bug where empty style elements don't create sheets
 	el.appendChild(document.createTextNode(""));
-
-	return document.head.appendChild(el);
+	document.head.appendChild(el);
+	return el;
 };
