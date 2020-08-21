@@ -1,6 +1,6 @@
 {
 	"name": "@atmc/core",
-	"version":"1.0.1",
+	"version": "1.0.2",
 	"description": "Atomic CSS-in-JS with a featherweight runtime",
 	"keywords": [
 		"css",
