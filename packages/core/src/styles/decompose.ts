@@ -54,7 +54,7 @@ export const setup = (has: (nameIndex: string) => boolean, add: (name: string, r
 		Object.keys(rules).forEach((key: string) => {
 			const value = rules[key as keyof typeof rules];
 
-			if (!value) {
+			if (!value && value !== 0) {
 				return;
 			}
 
