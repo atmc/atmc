@@ -26,17 +26,20 @@ type Setup = {
 };
 export const setup = ({ rules, sheet }: Setup = {}): Instance => {
 	const ruleSet = rules || new Set<string>();
-	const ruleIndex = new Set<string>();
 	// Rule indexes by identification name
+	const ruleIndex = new Set<string>();
+	let sheetNextRule = 0;
 
-	const has = (nameIndex: string): boolean => ruleIndex.has(nameIndex);
+	const has = (nameIndex) => ruleIndex.has(nameIndex);
 
-	const add = (name: string, rule: string) => {
+	const add = (name, rule) => {
 		ruleIndex.add(name);
 		ruleSet.add(rule);
+
 		if (sheet) {
 			try {
-				sheet.insertRule(rule, ruleIndex.size - 1);
+				sheet.insertRule(rule, sheetNextRule);
+				++sheetNextRule;
 			} catch (e) {
 				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
 			}
