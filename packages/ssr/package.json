@@ -18,7 +18,8 @@
 		"dist/"
 	],
 	"scripts": {
-		"build": "tsc",
+		"build": "rollup --config",
+		"build2": "tsc",
 		"clean": "del-cli \"dist\"",
 		"develop": "yarn build --watch"
 	},
