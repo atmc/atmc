@@ -10,7 +10,7 @@
 		"type-check": "tsc"
 	},
 	"dependencies": {
-		"@atmc/core": "*",
+		"@atmc/ssr": "*",
 		"next": "^9.5.3",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1"
