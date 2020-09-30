@@ -1,7 +1,8 @@
 {
 	"private": true,
 	"workspaces": [
-		"packages/*"
+		"packages/*",
+		"examples/*"
 	],
 	"scripts": {
 		"build": "lerna run --stream build",
@@ -88,11 +89,15 @@
 	},
 	"bundlesize": [
 		{
-			"path": "./packages/core/dist/bundle.js",
+			"path": "./packages/core/dist/index.js",
 			"maxSize": "2 kB"
 		},
 		{
-			"path": "./packages/css/dist/bundle.js",
+			"path": "./packages/css/dist/index.js",
+			"maxSize": "300 B"
+		},
+		{
+			"path": "./packages/ssr/dist/inex.jsx",
 			"maxSize": "300 B"
 		}
 	]

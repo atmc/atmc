@@ -1,5 +1,5 @@
 {
-	"name": "@atmc/css",
+	"name": "@atmc/ssr",
 	"version": "1.1.0",
 	"description": "Atomic CSS-in-JS with a featherweight runtime",
 	"keywords": [
