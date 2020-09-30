@@ -2,8 +2,8 @@
 	"include": ["./src/"],
 	"compilerOptions": {
 		"strict": true,
-		"target": "ESNext",
-		"module": "ESNext",
+		"target": "ES2015",
+		"module": "CommonJS",
 		"moduleResolution": "Node",
 		"isolatedModules": true,
 		"noImplicitAny": false,
