@@ -13,7 +13,7 @@ const normalize = (property: string, value: Value): string => {
 	return prefix(property, minifyValue(`${value}`));
 };
 
-type ValueArray = Value | Value[];
+export type ValueArray = Value | Value[];
 
 export const serialize = (property: string, value: ValueArray): string => {
 	if (typeof value !== "object") {

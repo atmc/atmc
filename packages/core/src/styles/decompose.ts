@@ -1,7 +1,7 @@
 import hash from "../utils/hash";
 import { minifyCondition } from "../minify";
 
-import { serialize } from "./declarations";
+import { serialize, ValueArray } from "./declarations";
 import { CSSRules } from "./types";
 
 type GetParentRule = {
@@ -64,7 +64,7 @@ export const setup = (has: (nameIndex: string) => boolean, add: (name: string, r
 
 				const propertyKey = key.replace(/[A-Z]/g, (match: string): string => `-${match.toLowerCase()}`);
 				// In case of class start with -
-				const declarations = serialize(propertyKey, value);
+				const declarations = serialize(propertyKey, value as ValueArray);
 				const className = hash(textHead + declarations);
 				if (!has(className)) {
 					const scopeSelector = `.${className}`;
