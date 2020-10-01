@@ -1,6 +1,6 @@
 {
 	"name": "example-cra",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"private": true,
 	"scripts": {
 		"build": "react-scripts build",
@@ -21,7 +21,7 @@
 		]
 	},
 	"dependencies": {
-		"@atmc/css": "1.1.0",
+		"@atmc/css": "1.1.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.1"
