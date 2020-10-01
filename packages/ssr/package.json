@@ -1,10 +1,10 @@
 {
-	"name": "@atmc/core",
+	"name": "@atmc/ssr",
 	"version": "1.1.1",
 	"description": "Atomic CSS-in-JS with a featherweight runtime",
 	"keywords": [
-		"css",
 		"css-in-js",
+		"css",
 		"atomic",
 		"microlibrary",
 		"styling",
@@ -12,18 +12,18 @@
 	],
 	"license": "MIT",
 	"author": "Tiago Souza <tiago@etc.digital>",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./dist/bundle.js",
+	"types": "./dist/bundle.d.ts",
 	"files": [
 		"dist/"
 	],
 	"scripts": {
-		"build": "tsc",
+		"build": "rollup --config",
+		"build2": "tsc",
 		"clean": "del-cli \"dist\"",
 		"develop": "yarn build --watch"
 	},
 	"dependencies": {
-		"csstype": "^3.0.3",
-		"tiny-css-prefixer": "^1.1.4"
+		"@atmc/core": "1.1.1"
 	}
 }

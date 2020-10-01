@@ -1,0 +1,21 @@
+{
+	"name": "example-nextjs",
+	"version": "1.1.1",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"clean": "del-cli .next/",
+		"develop": "next dev",
+		"serve": "next start",
+		"type-check": "tsc"
+	},
+	"dependencies": {
+		"@atmc/ssr": "*",
+		"next": "^9.5.3",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"devDependencies": {
+		"@types/react": "^16.9.49"
+	}
+}

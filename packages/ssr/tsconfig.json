@@ -11,9 +11,9 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"sourceMap": false,
-		"declaration": true,
 		"removeComments": true,
-		"outDir": "./dist"
-	},
-	"exclude": ["**/*.test.ts", "**/*.spec.ts"]
+		"declaration": true,
+		"outDir": "./dist",
+		"jsx": "preserve"
+	}
 }

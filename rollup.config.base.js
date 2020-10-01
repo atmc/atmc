@@ -11,7 +11,7 @@ const tsPlugin = ts({
 	tsconfig: path.join(__dirname, "tsconfig.json"),
 });
 
-const externals = ["@atmc/core", "@atmc/css", "@atmc/gatsby-plugin", "@atmc/ssr"];
+const externals = ["@atmc/core", "@atmc/css", "@atmc/ssr"];
 
 const plugins = [
 	tsPlugin,
@@ -29,10 +29,10 @@ export function buildNode(entryFile = "./src/index.ts") {
 		{
 			input: entryFile,
 			output: [
-				{
+				/* {
 					file: `./dist/bundle.mjs`,
 					format: "esm",
-				},
+				}, */
 				{
 					file: `./dist/bundle.js`,
 					format: "cjs",
