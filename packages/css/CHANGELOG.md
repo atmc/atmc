@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2020-12-07)
+
+
+### Features
+
+* **css:** add browser version of atmc ([5632696](https://github.com/atmc/atmc/commit/5632696796dacf4f99933c143ac7d5dfb413a4a6))
+* **css:** add new package of setup atmc and export to use ([c0d1778](https://github.com/atmc/atmc/commit/c0d1778bc3748dd77f95b99e70851bf01ffe085e))
+
+
+
+
+
 ## 0.2.1 (2020-07-27)
 
 
