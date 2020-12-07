@@ -1,13 +1,8 @@
 {
 	"root": true,
 	"env": { "browser": true },
-	"parserOptions": { "project": "./tsconfig-base.json" },
-	"extends": [
-		"tslint-plugin-prettier",
-		"tslint:recommended",
-		"tslint-config-prettier",
-		"@netflix/tslint-config"
-	],
+	"parserOptions": { "project": "./tsconfig.base.json" },
+	"extends": ["tslint-plugin-prettier", "tslint:recommended", "tslint-config-prettier", "@netflix/tslint-config"],
 	"plugins": ["prettier", "simple-import-sort"],
 
 	"rules": {
