@@ -1,0 +1,40 @@
+{
+	"name": "@atmc/instance",
+	"version": "1.1.4",
+	"description": "Atomic Design System for React",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/atmc/atmc"
+	},
+	"license": "Apache-2.0",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": "./dist/index.module.js",
+			"require": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.js",
+	"unpkg": "dist/index.min.js",
+	"module": "dist/index.module.js",
+	"source": "src/index.ts",
+	"types": "types/index.d.ts",
+	"files": [
+		"dist",
+		"types"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w"
+	},
+	"dependencies": {
+		"@atmc/global": "1.1.4",
+		"@atmc/hash": "1.1.4",
+		"@atmc/merge-styles": "1.1.4",
+		"@atmc/rules": "1.1.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
