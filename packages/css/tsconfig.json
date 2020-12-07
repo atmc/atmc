@@ -1,18 +1,9 @@
 {
-	"include": ["./src/"],
+	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
-		"strict": true,
-		"target": "ES2015",
-		"module": "CommonJS",
-		"moduleResolution": "Node",
-		"isolatedModules": true,
-		"noImplicitAny": false,
-		"esModuleInterop": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
-		"sourceMap": false,
-		"removeComments": true,
-		"declaration": true,
-		"outDir": "./dist"
-	}
+		"jsx": "react",
+		"outDir": "./dist",
+		"declarationDir": "./@types"
+	},
+	"include": ["src"]
 }

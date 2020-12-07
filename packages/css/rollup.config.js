@@ -1,3 +1,4 @@
-import { buildNode } from "../../rollup.config.base";
+import { build } from "../../rollup.base";
+import pkg from "./package.json";
 
-export default buildNode();
+export default build(pkg);

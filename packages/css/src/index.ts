@@ -1,12 +1,18 @@
-import * as React from "react";
-import { setup, getStyleId } from "@atmc/core";
+import { setup } from "@atmc/instance";
 
-const isBrowser = typeof window !== "undefined";
+let globalRules = {};
+let pageRules = [];
+let fontsRules = [];
 
-const defaultInstance = setup(isBrowser ? { sheet: getStyleId().sheet! } : {});
+const defaultInstance = setup({ rules: pageRules, globalRules, fonts: fontsRules });
 
-export const hydrate = defaultInstance.hydrate;
 export const css = defaultInstance.css;
 export const keyframes = defaultInstance.keyframes;
+export const globalStyles = defaultInstance.globalStyles;
+export const fonts = defaultInstance.fonts;
 
-export type { CSSRules, KeyframeRules } from "@atmc/core";
+export const getStyleString = (): string => {
+	return defaultInstance.hydrate();
+};
+
+export type { KeyframeRules, CSSRules, FontSrc } from "@atmc/rules";
