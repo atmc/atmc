@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/atmc/atmc/compare/@atmc/hash@1.3.0...@atmc/hash@1.3.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* **hash:** prevent comma on hash name ([dd59cd6](https://github.com/atmc/atmc/commit/dd59cd6833aabc0aa2f6f836d2b2e0b9f83a23a1))
+
+
+
+
+
 # 1.3.0 (2020-12-08)
 
 
