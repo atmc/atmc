@@ -44,7 +44,8 @@ export const hash = (str: string): string => {
 	const h = hasher(str);
 	// CSS class names can not start with numbers
 	const prefix = /[0-9]/gi.test(h[0]) ? "_" : "";
-	return `${prefix}${h}`;
+	const commaPrevent = prefix.replace(",", "_");
+	return `${commaPrevent}${h}`;
 };
 
 export default hash;
