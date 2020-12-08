@@ -1,6 +1,6 @@
 {
 	"name": "@atmc/css",
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"description": "Atomic Design System for React",
 	"repository": {
 		"type": "git",
@@ -29,8 +29,8 @@
 		"dev": "rollup -c -w"
 	},
 	"dependencies": {
-		"@atmc/instance": "^1.2.0",
-		"@atmc/rules": "^1.2.0"
+		"@atmc/instance": "^1.3.0",
+		"@atmc/rules": "^1.3.0"
 	},
 	"gitHead": "3f6ef638fc81e2a8531a420049fb98e2e13d13c7"
 }
