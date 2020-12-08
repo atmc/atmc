@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/atmc/atmc/compare/@atmc/instance@1.3.1...@atmc/instance@1.3.2) (2020-12-08)
+
+**Note:** Version bump only for package @atmc/instance
+
+
+
+
+
 ## [1.3.1](https://github.com/atmc/atmc/compare/@atmc/instance@1.3.0...@atmc/instance@1.3.1) (2020-12-08)
 
 **Note:** Version bump only for package @atmc/instance

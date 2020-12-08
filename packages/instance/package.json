@@ -1,6 +1,6 @@
 {
 	"name": "@atmc/instance",
-	"version": "1.3.1",
+	"version": "1.3.2",
 	"description": "Atomic Design System for React",
 	"repository": {
 		"type": "git",
@@ -29,10 +29,10 @@
 		"dev": "rollup -c -w"
 	},
 	"dependencies": {
-		"@atmc/global": "^1.3.1",
-		"@atmc/hash": "^1.3.1",
-		"@atmc/merge-styles": "^1.3.1",
-		"@atmc/rules": "^1.3.1"
+		"@atmc/global": "^1.3.2",
+		"@atmc/hash": "^1.3.2",
+		"@atmc/merge-styles": "^1.3.2",
+		"@atmc/rules": "^1.3.2"
 	},
 	"publishConfig": {
 		"access": "public"
