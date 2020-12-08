@@ -12,6 +12,7 @@
 		"format": "prettier --ignore-path .gitignore --write .",
 		"postinstall": "lerna run --scope @atmc/* --stream build && lerna bootstrap",
 		"lint": "eslint --ignore-path .gitignore \"**/*.{ts,tsx,js,jsx}\"",
+		"prepublish": "lerna run --scope @atmc/* --stream build && lerna bootstrap",
 		"publish": "lerna publish from-git --yes",
 		"release": "dotenv -- lerna version --create-release github",
 		"size": "lerna run --scope @atmc/* --stream build && bundlesize --enable-github-checks",
