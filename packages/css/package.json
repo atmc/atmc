@@ -31,5 +31,6 @@
 	"dependencies": {
 		"@atmc/instance": "^1.2.0",
 		"@atmc/rules": "^1.2.0"
-	}
+	},
+	"gitHead": "3f6ef638fc81e2a8531a420049fb98e2e13d13c7"
 }
