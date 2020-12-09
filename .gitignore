@@ -18,6 +18,7 @@ dist-*/
 public/
 
 # Next.js
+@types/
 .next/
 build/
 out/
