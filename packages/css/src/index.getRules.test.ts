@@ -5,6 +5,7 @@ import { css, globalStyles, keyframes, getStyleString } from "./";
  * Each step (like each component), we add more styles
  * If the property:value already exists, just return the className,
  * but if not exist, the property:value should be added in rules array
+ * -- IGNORE DESCRIPTIONS, FOR NOW IS JUST FOR TEST CLASS AND USERCASES
  */
 describe("Integration Tests - Get Rules", () => {
 	let rules = new Set<string>();
@@ -22,7 +23,7 @@ describe("Integration Tests - Get Rules", () => {
 				color: "red",
 			},
 		});
-		expect(getStyleString()).toEqual(`:root:{background-color:#fff;color:red}${previusStyle}`);
+		expect(getStyleString()).toEqual(`:root{background-color:#fff;color:red}${previusStyle}`);
 		previusStyle = getStyleString();
 	});
 
@@ -52,7 +53,7 @@ describe("Integration Tests - Get Rules", () => {
 			},
 		});
 		expect(getStyleString()).toEqual(
-			`:root:{background-color:#fff;color:red;--primary-color:#00b3da}._45bbqm{margin:10px 0}.dfjll8{background-color:#fff}.yvlnnb strong{color:#333}._1n3rzf3{background-color:red}`,
+			`:root{background-color:#fff;color:red;--primary-color:#00b3da}._45bbqm{margin:10px 0}.dfjll8{background-color:#fff}.yvlnnb strong{color:#333}._1n3rzf3{background-color:red}`,
 		);
 		previusStyle = getStyleString();
 	});
@@ -146,6 +147,13 @@ describe("Integration Tests - Get Rules", () => {
 	test("Prevent add empty value", () => {
 		expect(css({ "": "" } as any)).toBe("");
 		expect(getStyleString()).toEqual(previusStyle);
+		previusStyle = getStyleString();
+	});
+
+	test("add class", () => {
+		expect(css({ background: "none" } as any)).toBe("bigtx2");
+		expect(getStyleString()).toEqual(`${previusStyle}.bigtx2{background:none}`);
+		previusStyle = getStyleString();
 	});
 
 	test("should return a fallback values when auto-prefixing isn't enough", () => {
@@ -169,5 +177,6 @@ describe("Integration Tests - Get Rules", () => {
 	test("should return classes for non-standard pseudo-element", () => {
 		expect(css({ selectors: { "::-ms-expand": { backgroundColor: "transparent" } } })).toBe("iis6lg");
 		expect(getStyleString()).toEqual(`${previusStyle}.iis6lg::-ms-expand{background-color:transparent}`);
+		previusStyle = getStyleString();
 	});
 });
