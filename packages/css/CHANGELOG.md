@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/atmc/atmc/compare/@atmc/css@1.4.0...@atmc/css@2.0.0) (2020-12-09)
+
+
+### Features
+
+* :zap: all packages have been moved to @ atmc/css ([cdb0a45](https://github.com/atmc/atmc/commit/cdb0a45c7df40896f868d1d37469d6eb81f19794))
+
+
+### BREAKING CHANGES
+
+* to improve performance, the package is now just one
+
+
+
+
+
 # [1.4.0](https://github.com/atmc/atmc/compare/@atmc/css@1.3.2...@atmc/css@1.4.0) (2020-12-09)
 
 
