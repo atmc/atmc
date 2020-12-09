@@ -27,9 +27,5 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w"
 	},
-	"dependencies": {
-		"@atmc/instance": "^1.4.0",
-		"@atmc/rules": "^1.3.3"
-	},
-	"gitHead": "9177e57c521443c980770642be939d1540099f9a"
+	"gitHead": "8787e71d42e43a80a1343493c8d04eba479c7e0e"
 }
