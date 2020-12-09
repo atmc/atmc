@@ -4,7 +4,7 @@ import { extractKeyFrames, setupDecompose, KeyframeRules, CSSRules } from "@atmc
 import { getGlobalRule, GlobalRules, HTMLTags, FontSrc } from "@atmc/global";
 
 export type Instance = {
-	hydrate(): void;
+	getStylesString(): string;
 	css(stylesRules: CSSRules | CSSRules[]): string;
 	globalStyles(stylesRules: Partial<GlobalRules>): void;
 	fonts(srcs: FontSrc[]): void;
@@ -68,7 +68,7 @@ export const setup = ({ rules, globalRules, fonts }: Setup = {}): Instance => {
 		 * Marks server-rendered CSS identity names as available
 		 * to avoid re-injecting them to the style sheet during runtime.
 		 */
-		hydrate(): string {
+		getStylesString(): string {
 			let styleString = "";
 
 			Object.keys(globalSet).forEach((key: string) => (styleString += `${key}{${globalSet[key]!.join(";")}}`));

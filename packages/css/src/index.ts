@@ -12,7 +12,7 @@ export const globalStyles = defaultInstance.globalStyles;
 export const fonts = defaultInstance.fonts;
 
 export const getStyleString = (): string => {
-	return defaultInstance.hydrate();
+	return defaultInstance.getStylesString();
 };
 
 export type { KeyframeRules, CSSRules, FontSrc } from "@atmc/rules";
