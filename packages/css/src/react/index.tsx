@@ -1,13 +1,30 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import { getStyleString } from "../";
 
-export const getReactStyle: FC = () => {
-	const [_, setIsClient] = useState<boolean>(false);
+const styleID = "_atmc";
 
-	useEffect(() => {
-		// Fix re-hydratation
-		setIsClient(true);
-	}, []);
+const getElement = (): HTMLStyleElement => {
+	// Hydrate existing style element if available
+	let el = document.getElementById(styleID) as HTMLStyleElement;
+	if (el) {
+		return el;
+	}
 
-	return <style id="_atmc" dangerouslySetInnerHTML={{ __html: getStyleString() }} />;
+	// Create a new one otherwise
+	el = document.createElement("style");
+	el.id = styleID;
+
+	// Avoid Edge bug where empty style elements don't create sheets
+	el.appendChild(document.createTextNode(""));
+	document.head.appendChild(el);
+	return el;
+};
+
+export const ReactStyle: FC = () => {
+	if (window) {
+		const element = getElement();
+		element.innerHTML = getStyleString();
+		return <></>;
+	}
+	return <style id={styleID} dangerouslySetInnerHTML={{ __html: getStyleString() }} />;
 };

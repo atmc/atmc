@@ -11,7 +11,7 @@ export const css = defaultInstance.css;
 export const keyframes = defaultInstance.keyframes;
 export const globalStyles = defaultInstance.globalStyles;
 export const fonts = defaultInstance.fonts;
-export { getReactStyle } from "./react";
+export { ReactStyle } from "./react";
 
 export type { KeyframeRules, CSSRules } from "./rules";
 export type { FontSrc } from "./fonts";
