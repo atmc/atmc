@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"jsx": "react",
 		"outDir": "./dist",
-		"declarationDir": "./@types"
+		"declarationDir": "./dist/@types"
 	},
 	"include": ["src"]
 }

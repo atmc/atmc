@@ -1,4 +1,4 @@
-import { setup } from "@atmc/instance";
+import { setup } from "./instance";
 
 let globalRules = {};
 let pageRules = [];
@@ -6,13 +6,13 @@ let fontsRules = [];
 
 const defaultInstance = setup({ rules: pageRules, globalRules, fonts: fontsRules });
 
+export const getStyleString = defaultInstance.getStylesString;
 export const css = defaultInstance.css;
 export const keyframes = defaultInstance.keyframes;
 export const globalStyles = defaultInstance.globalStyles;
 export const fonts = defaultInstance.fonts;
+export { getReactStyle } from "./react";
 
-export const getStyleString = (): string => {
-	return defaultInstance.getStylesString();
-};
-
-export type { KeyframeRules, CSSRules, FontSrc } from "@atmc/rules";
+export type { KeyframeRules, CSSRules } from "./rules";
+export type { FontSrc } from "./fonts";
+export type { GlobalRules } from "./global";
