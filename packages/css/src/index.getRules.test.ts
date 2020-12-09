@@ -179,4 +179,52 @@ describe("Integration Tests - Get Rules", () => {
 		expect(getStyleString()).toEqual(`${previusStyle}.iis6lg::-ms-expand{background-color:transparent}`);
 		previusStyle = getStyleString();
 	});
+
+	test("case input missing", () => {
+		expect(
+			css({
+				marginTop: 16,
+				position: "relative",
+				WebkitTransition: "all .3s ease",
+				transition: "all .3s ease",
+			}),
+		).toBe("yz1nei bjn8wh _486azt wk7jmh");
+		expect(getStyleString()).toEqual(`${previusStyle}.yz1nei{margin-top:16px}.bjn8wh{position:relative}._486azt{-webkit-transition:all .3s ease}.wk7jmh{transition:all .3s ease}`);
+		previusStyle = getStyleString();
+	});
+
+	test("case input missing 2", () => {
+		expect(
+			css({
+				background: "none",
+				boxSizing: "border-box",
+				color: "#484848",
+				padding: 15,
+				position: "relative",
+				transition: "color .3s ease,padding .3s ease",
+				backgroundClip: "padding-box",
+				border: "1px solid #ced4da",
+				borderRadius: 4,
+				width: "100%",
+				height: 52,
+				zIndex: 1,
+				outline: "none!important",
+				selectors: {
+					"&::-webkit-input-placeholder": { color: "#ddd", opacity: 1 },
+					"&::placeholder": { color: "ddd", opacity: 1 },
+					"&:disabled": { opacity: 1 },
+					"&[readonly]": { opacity: 1 },
+					"&:focus": { borderColor: "#0088cc" },
+					'&[data-error="true"]': { borderColor: "darkred" },
+					"&:disabled + label span:after,&[readonly] + label span:after": { borderColor: "#eee" },
+				},
+			}),
+		).toBe(
+			"bigtx2 _1khn195 _10emcha _1jj7er4 bjn8wh _1smy46f _1nbvy6x zzre7v _1u8hqvf _1d3w5wq _452cf2 _1739oy8 ef6p0o gsown1 t8qk3u yy5dft _1c641yc _1547t8l _1joh1iw _1beih6f _1v2pmdc fgclp5 au02a4",
+		);
+		expect(getStyleString()).toEqual(
+			`${previusStyle}._1khn195{box-sizing:border-box}._10emcha{color:#484848}._1jj7er4{padding:15px}._1smy46f{transition:color .3s ease,padding .3s ease}._1nbvy6x{background-clip:padding-box;-webkit-background-clip:padding-box}.zzre7v{border:1px solid #ced4da}._1u8hqvf{border-radius:4px}._1d3w5wq{width:100%}._452cf2{height:52px}._1739oy8{z-index:1}.ef6p0o{outline:none!important}.gsown1::-webkit-input-placeholder{color:#ddd}.t8qk3u::-webkit-input-placeholder{opacity:1}.yy5dft::placeholder{color:ddd}._1c641yc::placeholder{opacity:1}._1547t8l:disabled{opacity:1}._1joh1iw[readonly]{opacity:1}._1beih6f:focus{border-color:#0088cc}._1v2pmdc[data-error=\"true\"]{border-color:darkred}.fgclp5:disabled + label span:after{border-color:#eee}.au02a4[readonly] + label span:after{border-color:#eee}`,
+		);
+		previusStyle = getStyleString();
+	});
 });
