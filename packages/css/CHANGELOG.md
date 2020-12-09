@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/atmc/atmc/compare/@atmc/css@2.0.0...@atmc/css@2.0.1) (2020-12-09)
+
+
+### Bug Fixes
+
+* **react:** remove useState and add getElement to rehydratate ([d1b105b](https://github.com/atmc/atmc/commit/d1b105b5aa3124b40e1e92679d914eaedd6da7f9))
+
+
+
+
+
 # [2.0.0](https://github.com/atmc/atmc/compare/@atmc/css@1.4.0...@atmc/css@2.0.0) (2020-12-09)
 
 
