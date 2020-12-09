@@ -9,7 +9,7 @@ const getStyle: FC = () => {
 		setIsClient(true);
 	}, []);
 
-	return <style id="_cssatom" dangerouslySetInnerHTML={{ __html: getStyleString() }} />;
+	return <style id="_atmc" dangerouslySetInnerHTML={{ __html: getStyleString() }} />;
 };
 
 export default getStyle;
