@@ -19,7 +19,7 @@
 	"unpkg": "dist/bundle.min.js",
 	"module": "dist/bundle.module.js",
 	"source": "src/index.ts",
-	"types": "dist/types/index.d.ts",
+	"types": "dist/@types/index.d.ts",
 	"files": [
 		"dist"
 	],
@@ -27,5 +27,5 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w"
 	},
-	"gitHead": "eb4b43207a828f15d4175cc17c6384370b8d4814"
+	"gitHead": "fee96f7616ae54d73bad53df283631640160c9c7"
 }
