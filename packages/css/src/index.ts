@@ -1,10 +1,12 @@
+import { getStyleId } from "./dom";
 import { setup } from "./instance";
 
 let globalRules = {};
 let pageRules = [];
 let fontsRules = [];
 
-const defaultInstance = setup({ rules: pageRules, globalRules, fonts: fontsRules });
+const isBrowser = typeof window !== "undefined";
+const defaultInstance = setup({ rules: pageRules, globalRules, fonts: fontsRules, sheet: isBrowser ? getStyleId().sheet! : undefined });
 
 export const getStyleString = defaultInstance.getStyleString;
 export const css = defaultInstance.css;

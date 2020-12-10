@@ -1,7 +1,6 @@
 import React, { FC, Fragment } from "react";
 import { getStyleString } from "../";
-
-const styleID = "_atmc";
+import { styleID } from "../dom";
 
 export const ClientStyle: FC = () => {
 	if (typeof window === "undefined") {
