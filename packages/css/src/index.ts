@@ -6,7 +6,7 @@ let fontsRules = [];
 
 const defaultInstance = setup({ rules: pageRules, globalRules, fonts: fontsRules });
 
-export const getStyleString = defaultInstance.getStylesString;
+export const getStyleString = defaultInstance.getStyleString;
 export const css = defaultInstance.css;
 export const keyframes = defaultInstance.keyframes;
 export const globalStyles = defaultInstance.globalStyles;

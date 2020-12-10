@@ -5,7 +5,7 @@ import { getGlobalRule, GlobalRules, HTMLTags } from "../global";
 import { FontSrc } from "../fonts";
 
 export type Instance = {
-	getStylesString(): string;
+	getStyleString(): string;
 	css(stylesRules: CSSRules | CSSRules[]): string;
 	globalStyles(stylesRules: Partial<GlobalRules>): void;
 	fonts(srcs: FontSrc[]): void;
@@ -82,7 +82,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 		 * Marks server-rendered CSS identity names as available
 		 * to avoid re-injecting them to the style sheet during runtime.
 		 */
-		getStylesString(): string {
+		getStyleString(): string {
 			let styleString = "";
 
 			Object.keys(globalSet).forEach((key: string) => (styleString += `${key}{${globalSet[key]!.join(";")}}`));
