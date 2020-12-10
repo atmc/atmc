@@ -10,8 +10,8 @@
 	"sideEffects": false,
 	"exports": {
 		".": {
-			"import": "./bundle/index.module.js",
-			"require": "./bundle/index.js"
+			"import": "./dist/bundle.module.js",
+			"require": "./dist/bundle.js"
 		},
 		"./package.json": "./package.json"
 	},
@@ -27,5 +27,5 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w"
 	},
-	"gitHead": "4ab5e89bc6b5fc13da04977c176e8389c7fab32c"
+	"gitHead": "9e9494b5057ff03e94686c8c6073a9019befae49"
 }
