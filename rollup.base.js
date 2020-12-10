@@ -12,12 +12,14 @@ export const build = function (pkg) {
 				file: pkg.module,
 				sourcemap: false,
 				exports: "named",
+				plugins: [terser()],
 			},
 			{
 				format: "cjs",
 				file: pkg.main,
 				sourcemap: false,
 				exports: "named",
+				plugins: [terser()],
 			},
 			{
 				name: pkg["umd:name"] || pkg.name,
