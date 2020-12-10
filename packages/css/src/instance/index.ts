@@ -19,17 +19,30 @@ export type Instance = {
 type GlobalRulesSet = { [key in HTMLTags]: string[] };
 
 type Setup = {
+	sheet?: CSSStyleSheet;
 	rules?: string[];
 	globalRules?: Partial<GlobalRulesSet>;
 	fonts?: string[];
 };
-export const setup = ({ rules, globalRules, fonts }: Setup = {}): Instance => {
+export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instance => {
 	const ruleArr = rules || [];
 	const globalSet = globalRules || {};
 	const fontArr = fonts || [];
+	let sheetNextRule = 0;
 
 	const has = (nameIndex) => ruleArr.indexOf(nameIndex) > -1;
-	const add = (rule) => ruleArr.push(rule);
+	const add = (rule) => {
+		ruleArr.push(rule);
+
+		if (sheet) {
+			try {
+				sheet.insertRule(rule, sheetNextRule);
+				++sheetNextRule;
+			} catch (e) {
+				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
+			}
+		}
+	};
 
 	const decomposeToClassNames = setupDecompose(has, add);
 
