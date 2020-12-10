@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/atmc/atmc/compare/@atmc/css@2.1.0...@atmc/css@2.2.0) (2020-12-10)
+
+
+### Features
+
+* **css:** add sheet (CSSStyleSheet) to store styles on browser ([ce84a22](https://github.com/atmc/atmc/commit/ce84a22753bc18d022e0989f31f980cdaef9543f))
+
+
+
+
+
 # [2.1.0](https://github.com/atmc/atmc/compare/@atmc/css@2.0.1...@atmc/css@2.1.0) (2020-12-09)
 
 
