@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/atmc/atmc/compare/@atmc/css@2.2.3...@atmc/css@2.3.0) (2020-12-10)
+
+
+### Features
+
+* **css:** add support to Browser SheetStyle automatically ([b5655b9](https://github.com/atmc/atmc/commit/b5655b98662dd313a8fe2303dcdd500f2df6ea0b))
+
+
+
+
+
 ## [2.2.3](https://github.com/atmc/atmc/compare/@atmc/css@2.2.2...@atmc/css@2.2.3) (2020-12-10)
 
 **Note:** Version bump only for package @atmc/css
