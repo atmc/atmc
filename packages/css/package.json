@@ -15,9 +15,9 @@
 		},
 		"./package.json": "./package.json"
 	},
-	"main": "dist/index.js",
-	"unpkg": "dist/index.min.js",
-	"module": "dist/index.module.js",
+	"main": "dist/bundle.js",
+	"unpkg": "dist/bundle.min.js",
+	"module": "dist/bundle.module.js",
 	"source": "src/index.ts",
 	"types": "dist/types/index.d.ts",
 	"files": [
