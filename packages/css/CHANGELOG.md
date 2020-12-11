@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/atmc/atmc/compare/@atmc/css@2.5.1...@atmc/css@2.6.0) (2020-12-11)
+
+
+### Bug Fixes
+
+* **css:** fixes order of insert text node to style tag ([75575ac](https://github.com/atmc/atmc/commit/75575ac2c5affc568febd28e53eaa030a5869f3b))
+
+
+### Features
+
+* **css:** add options to font-display and unicodeRange ([45c0000](https://github.com/atmc/atmc/commit/45c0000df23cd1bf73c076ad6e77b9dd5b952324))
+* **css:** globalStyle now insert on style tag ([338fc5f](https://github.com/atmc/atmc/commit/338fc5f5868c1a7895268407b583a5a01cc1750e))
+
+
+
+
+
 ## [2.5.1](https://github.com/atmc/atmc/compare/@atmc/css@2.5.0...@atmc/css@2.5.1) (2020-12-11)
 
 
