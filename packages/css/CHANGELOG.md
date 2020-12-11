@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/atmc/atmc/compare/@atmc/css@2.5.0...@atmc/css@2.5.1) (2020-12-11)
+
+
+### Bug Fixes
+
+* **css:** fix target set variable ([3dead91](https://github.com/atmc/atmc/commit/3dead913cd7d24a2ef01935ed3f20176ccaa8fbe))
+
+
+
+
+
 # [2.5.0](https://github.com/atmc/atmc/compare/@atmc/css@2.4.0...@atmc/css@2.5.0) (2020-12-11)
 
 
