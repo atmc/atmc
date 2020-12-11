@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/atmc/atmc/compare/@atmc/css@2.4.0...@atmc/css@2.5.0) (2020-12-11)
+
+
+### Bug Fixes
+
+* **web:** allow all styles for globals ([0c2f9dc](https://github.com/atmc/atmc/commit/0c2f9dc902d60604101b8e6708673f97e8b7ae0e))
+
+
+### Features
+
+* **css:** add *::before and *::after for global styles ([c169572](https://github.com/atmc/atmc/commit/c16957252c10d33f3dd5f3e087e223c2250b5081))
+* **css:** insert rule as text instead browser virtual insert ([44727dd](https://github.com/atmc/atmc/commit/44727ddea64b889d4feeb4b3e83750b90820ab30))
+
+
+
+
+
 # [2.4.0](https://github.com/atmc/atmc/compare/@atmc/css@2.3.0...@atmc/css@2.4.0) (2020-12-11)
 
 
