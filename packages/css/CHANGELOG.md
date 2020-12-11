@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/atmc/atmc/compare/@atmc/css@2.3.0...@atmc/css@2.4.0) (2020-12-11)
+
+
+### Features
+
+* **css:** add * for global styles ([bbdfe1c](https://github.com/atmc/atmc/commit/bbdfe1cabd9bc18008920833863e80f8f109ade0))
+
+
+
+
+
 # [2.3.0](https://github.com/atmc/atmc/compare/@atmc/css@2.2.3...@atmc/css@2.3.0) (2020-12-10)
 
 
