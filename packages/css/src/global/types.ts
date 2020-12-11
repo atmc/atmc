@@ -108,6 +108,7 @@ export type HTMLTags =
 	| "u"
 	| "ul"
 	| "video"
-	| "wbr";
+	| "wbr"
+	| string;
 
 export type GlobalRules = { [key in HTMLTags]: Record<string, any> };
