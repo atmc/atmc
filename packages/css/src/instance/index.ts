@@ -39,7 +39,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 		if (sheet) {
 			try {
 				if (!target) {
-					getStyleId();
+					target = getStyleId();
 				}
 				target.insertBefore(document.createTextNode(rule), target.childNodes[sheetNextRule]);
 
