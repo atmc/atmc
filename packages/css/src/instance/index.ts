@@ -32,7 +32,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 	let target;
 
 	const has = (nameIndex) => ruleArr.indexOf(nameIndex) > -1;
-	const add = (rule) => {
+	const add = (rule, customIndex = 0) => {
 		ruleArr.push(rule);
 
 		if (sheet) {
@@ -40,7 +40,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 				if (!target) {
 					target = getStyleId();
 				}
-				target.insertBefore(document.createTextNode(rule), target.childNodes[target.childNodes.length - 1]);
+				target.insertBefore(document.createTextNode(rule), !!customIndex ? customIndex : target.childNodes[target.childNodes.length - 1]);
 			} catch (e) {
 				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
 			}
@@ -63,14 +63,15 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 
 	return {
 		globalStyles(stylesRules: Partial<GlobalRules>): void {
-			Object.keys(stylesRules).forEach((key: string) => {
-				if (!globalSet[key]) {
-					globalSet[key] = [];
+			Object.keys(stylesRules).forEach((property: string) => {
+				if (!globalSet[property]) {
+					globalSet[property] = [];
 				}
-				const styleKeys = Object.keys(stylesRules[key]!);
-				styleKeys.forEach((skey) => {
-					const gRule = getGlobalRule(skey, stylesRules[key]![skey]);
-					globalSet[key]!.push(gRule);
+				const styleKeys = Object.keys(stylesRules[property]!);
+				styleKeys.forEach((skey, key) => {
+					const gRule = getGlobalRule(skey, stylesRules[property]![skey]);
+					add(gRule, key);
+					globalSet[property]!.push(gRule);
 				});
 			});
 		},
