@@ -27,5 +27,5 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w"
 	},
-	"gitHead": "008fcf6c45cc355c5ad0d586eed51e0a3ce8c42c"
+	"gitHead": "adfe27836a547851466a250c9c84138fb0a332c5"
 }
