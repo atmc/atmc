@@ -2,6 +2,7 @@ import hash from "../hash";
 import { objectsMerge } from "../merge-styles";
 import { extractKeyFrames, setupDecompose, KeyframeRules, CSSRules } from "../rules";
 import { getGlobalRule, GlobalRules, HTMLTags } from "../global";
+import { getStyleId } from "../dom";
 import { FontSrc } from "../fonts";
 
 export type Instance = {
@@ -29,6 +30,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 	const globalSet = globalRules || {};
 	const fontArr = fonts || [];
 	let sheetNextRule = 0;
+	let target;
 
 	const has = (nameIndex) => ruleArr.indexOf(nameIndex) > -1;
 	const add = (rule) => {
@@ -36,8 +38,13 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 
 		if (sheet) {
 			try {
-				sheet.insertRule(rule, sheetNextRule);
-				++sheetNextRule;
+				if (!target) {
+					getStyleId();
+				}
+				target.insertBefore(document.createTextNode(rule), target.childNodes[sheetNextRule]);
+
+				// sheet.insertRule(rule, sheetNextRule);
+				// ++sheetNextRule;
 			} catch (e) {
 				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
 			}
@@ -64,9 +71,9 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 				if (!globalSet[key]) {
 					globalSet[key] = [];
 				}
-				const styleKeys = Object.keys(stylesRules[key]);
+				const styleKeys = Object.keys(stylesRules[key]!);
 				styleKeys.forEach((skey) => {
-					const gRule = getGlobalRule(skey, stylesRules[key][skey]);
+					const gRule = getGlobalRule(skey, stylesRules[key]![skey]);
 					globalSet[key]!.push(gRule);
 				});
 			});
