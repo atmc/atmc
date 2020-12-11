@@ -29,7 +29,6 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 	const ruleArr = rules || [];
 	const globalSet = globalRules || {};
 	const fontArr = fonts || [];
-	let sheetNextRule = 0;
 	let target;
 
 	const has = (nameIndex) => ruleArr.indexOf(nameIndex) > -1;
@@ -41,10 +40,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 				if (!target) {
 					target = getStyleId();
 				}
-				target.insertBefore(document.createTextNode(rule), target.childNodes[sheetNextRule]);
-
-				// sheet.insertRule(rule, sheetNextRule);
-				// ++sheetNextRule;
+				target.insertBefore(document.createTextNode(rule), target.childNodes[target.childNodes.length - 1]);
 			} catch (e) {
 				console.info(`The "${rule}" class cannot be added: Syntax error`, e);
 			}
