@@ -14,6 +14,7 @@
 
 <p align="center">
 	<a href="https://www.npmjs.com/package/@atmc/css"><img alt="npm" src="https://img.shields.io/npm/v/@atmc/css"></a>
+	<a href="https://www.npmjs.com/package/@atmc/css"><img alt="npm" src="https://badgen.net/bundlephobia/min/@atmc/css"></a>
 </p>
 
 <p align="center">
