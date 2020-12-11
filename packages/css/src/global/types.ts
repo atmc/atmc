@@ -1,6 +1,8 @@
 export type HTMLTags =
 	| "*"
 	| ":root"
+	| "*::before"
+	| "*::after"
 	| "a"
 	| "abbr"
 	| "address"
