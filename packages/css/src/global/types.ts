@@ -1,4 +1,5 @@
 export type HTMLTags =
+	| "*"
 	| ":root"
 	| "a"
 	| "abbr"
