@@ -1,6 +1,6 @@
 {
 	"name": "@atmc/css",
-	"version": "2.7.0",
+	"version": "2.7.1",
 	"description": "Atomic Design System for React",
 	"repository": {
 		"type": "git",
