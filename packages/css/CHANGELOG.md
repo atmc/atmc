@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/atmc/atmc/compare/@atmc/css@2.6.0...@atmc/css@2.7.0) (2020-12-15)
+
+
+### Features
+
+* **css:** add className before and after the atmc className ([6d511d5](https://github.com/atmc/atmc/commit/6d511d5f0765045db35b858e32113d185d3d0c63))
+
+
+
+
+
 # [2.6.0](https://github.com/atmc/atmc/compare/@atmc/css@2.5.1...@atmc/css@2.6.0) (2020-12-11)
 
 
