@@ -5,14 +5,14 @@ import { getGlobalRule, GlobalRules, HTMLTags } from "../global";
 import { getStyleId } from "../dom";
 import { FontSrc } from "../fonts";
 
-type ExtraClassName = {
+type ExtraClassNames = {
 	before?: string;
 	after?: string;
 };
 
 export type Instance = {
 	getStyleString(): string;
-	css(stylesRules: CSSRules | CSSRules[], extraClassNames?: ExtraClassName): string;
+	css(stylesRules: CSSRules | CSSRules[], extraClassNames?: ExtraClassNames): string;
 	globalStyles(stylesRules: Partial<GlobalRules>): void;
 	fonts(srcs: FontSrc[]): void;
 	keyframes(
@@ -127,7 +127,7 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 		 *   animation: `${pulse} 3s infinite alternate`
 		 * });
 		 */
-		css(stylesRules: CSSRules | CSSRules[], { before, after }: ExtraClassName = { before: "", after: "" }): string {
+		css(stylesRules: CSSRules | CSSRules[], { before, after }: ExtraClassNames = { before: "", after: "" }): string {
 			const rules: CSSRules = (stylesRules as any).length ? objectsMerge(stylesRules as CSSRules[]) : (stylesRules as CSSRules);
 
 			let classNames: string[] = [];
