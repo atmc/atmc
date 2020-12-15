@@ -5,9 +5,14 @@ import { getGlobalRule, GlobalRules, HTMLTags } from "../global";
 import { getStyleId } from "../dom";
 import { FontSrc } from "../fonts";
 
+type ExtraClassName = {
+	before?: string;
+	after?: string;
+};
+
 export type Instance = {
 	getStyleString(): string;
-	css(stylesRules: CSSRules | CSSRules[]): string;
+	css(stylesRules: CSSRules | CSSRules[], extraClassNames?: ExtraClassName): string;
 	globalStyles(stylesRules: Partial<GlobalRules>): void;
 	fonts(srcs: FontSrc[]): void;
 	keyframes(
@@ -122,15 +127,21 @@ export const setup = ({ sheet, rules, globalRules, fonts }: Setup = {}): Instanc
 		 *   animation: `${pulse} 3s infinite alternate`
 		 * });
 		 */
-		css(stylesRules: CSSRules | CSSRules[]): string {
+		css(stylesRules: CSSRules | CSSRules[], { before, after }: ExtraClassName = { before: "", after: "" }): string {
 			const rules: CSSRules = (stylesRules as any).length ? objectsMerge(stylesRules as CSSRules[]) : (stylesRules as CSSRules);
 
+			let classNames: string[] = [];
+			if (before) {
+				classNames.push(before);
+			}
+
 			// The leading white space character gets removed
-			return decomposeToClassNames({
-				rules,
-				textHead: "",
-				textTail: "",
-			}).slice(1);
+			classNames.push(decomposeToClassNames({ rules, textHead: "", textTail: "" }).slice(1));
+
+			if (after) {
+				classNames.push(after);
+			}
+			return classNames.join(" ");
 		},
 
 		keyframes(rules: KeyframeRules): { /** @private */ toString(): string } {
